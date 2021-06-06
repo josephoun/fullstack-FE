@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Posts</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Post Title</th>
+      <th>Post Content</th>
+      <th>Add to Favorites</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let post of posts; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.content}}</td>
+      <td><button type="button" (click)="addToFavorites(post)">Add</button></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
