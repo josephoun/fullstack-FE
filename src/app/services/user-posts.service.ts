@@ -14,6 +14,7 @@ export class UserService {
   }
 
   addToFavorites(post: Post, userValue: any) {
-    return this.http.post( `${this.rootURL}/addToFavorites`, {post: post, userValue: userValue})
+    debugger;
+    return this.http.post( `${this.rootURL}/addToFavorites`, {postId: post.id, userValue: userValue})
   }
 }

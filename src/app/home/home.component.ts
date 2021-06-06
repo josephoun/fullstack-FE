@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.userService.getAllPosts().pipe(takeUntil(this.destroy$)).subscribe((posts: any[]) => {
-      debugger;
       return this.posts = posts;
     });
   }
@@ -31,11 +30,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   addToFavorites(post: Post) {
-    debugger;
     const userValue = this.authService.currentUser;
-
-    this.userService.addToFavorites(post, {user: 1}).pipe(takeUntil(this.destroy$)).subscribe((posts: any[]) => {
-      debugger;
+debugger;
+    this.userService.addToFavorites(post, {user: 1234}).pipe(takeUntil(this.destroy$)).subscribe((posts: any[]) => {
       return this.posts = posts;
     });
   }

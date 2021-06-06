@@ -7,6 +7,7 @@
       <th>Post Title</th>
       <th>Post Content</th>
       <th>Add to Favorites</th>
+      <th>Remove From Favorites</th>
 
     </tr>
     </thead>
@@ -16,7 +17,7 @@
       <td>{{post.title}}</td>
       <td>{{post.content}}</td>
       <td><button type="button" (click)="addToFavorites(post)">Add</button></td>
-
+      <td><button type="button" (click)="addToFavorites(post)">Remove</button></td>
     </tr>
     </tbody>
   </table>
