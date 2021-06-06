@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   addToFavorites(post: Post) {
     const userValue = this.authService.currentUser;
-debugger;
     this.userService.addToFavorites(post, {user: 1234}).pipe(takeUntil(this.destroy$)).subscribe((posts: any[]) => {
       return this.posts = posts;
     });

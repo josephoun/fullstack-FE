@@ -1,5 +1,5 @@
-<div class="container">
-  <h2>Posts</h2>
+<div class="container"  *ngIf="posts.length> 0">
+  <h2>Posts</h2 >
   <table class="table table-bordered">
     <thead>
     <tr>
@@ -21,4 +21,8 @@
     </tr>
     </tbody>
   </table>
+</div>
+
+<div class="container"  *ngIf="posts.length == 0">
+  <h2>No Posts to show</h2 >
 </div>
